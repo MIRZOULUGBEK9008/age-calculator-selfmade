@@ -29,23 +29,26 @@
 
   <!-- MAIN-WRAPPER  -->
   <section class="wrapper">
+    <h1 class="visually-hidden">
+      Qancha umr ko'rganningizni hisoblang !
+    </h1>
     <div class="wrapper__inner">
       <div class="header wrapper__header">
         <div class="header__inner">
           <!-- FORM  -->
-          <form class="form" action="https://echo.htmlacademy.ru" method="post">
+          <form class="form js-form" action="https://echo.htmlacademy.ru" method="post">
             <div class="form__inner">
               <div class="form__input-wrapper">
-                <label class="label js-date" for="date">Kun</label>
-                <input class="input" type="number" name="birth-date" placeholder="DD" required="Tug'ilgan kuningizni kiriting !" id="date">
+                <label class="label" for="date">Kun</label>
+                <input class="input js-date" type="number" name="birth-date" placeholder="DD" id="date" min="01" max="31" required>
               </div>
               <div class="form__input-wrapper">
                 <label class="label" for="month">Oy</label>
-                <input class="input js-month" type="number" name="birth-month" placeholder="MM" required="Tug'ilgan oyingizni kiriting !" id="month">
+                <input class="input js-month" type="number" name="birth-month" placeholder="MM" id="month" min="01" max="12" required>
               </div>
               <div class="form__input-wrapper">
                 <label class="label" for="year">Yil</label>
-                <input class="input js-year" type="number" name="birth-year" placeholder="YYYY" required="Tug'ilgan yilingizni kiriting !" id="year">
+                <input class="input js-year" type="number" name="birth-year" placeholder="YYYY" id="year" min="1900" max="2023" required>
               </div>
             </div>
             <div class="form__button-wrapper">

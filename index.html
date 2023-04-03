@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Name of Project</title>
+  <title>Qancha yashaganingizni hisoblang !</title>
+
+  <!-- FAVICON  -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 
   <!-- STYLES  -->
   <link rel="stylesheet" href="css/normalize.css">
@@ -13,7 +22,53 @@
 </head>
 <body>
 
+  <!-- LAODER  -->
+  <div class="loader-wrapper js-loader">
+    <span class="loader"></span>
+  </div>
 
+  <!-- MAIN-WRAPPER  -->
+  <section class="wrapper">
+    <div class="wrapper__inner">
+      <div class="header wrapper__header">
+        <div class="header__inner">
+          <!-- FORM  -->
+          <form class="form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="form__inner">
+              <div class="form__input-wrapper">
+                <label class="label js-date" for="date">Kun</label>
+                <input class="input" type="number" name="birth-date" placeholder="DD" required="Tug'ilgan kuningizni kiriting !" id="date">
+              </div>
+              <div class="form__input-wrapper">
+                <label class="label" for="month">Oy</label>
+                <input class="input js-month" type="number" name="birth-month" placeholder="MM" required="Tug'ilgan oyingizni kiriting !" id="month">
+              </div>
+              <div class="form__input-wrapper">
+                <label class="label" for="year">Yil</label>
+                <input class="input js-year" type="number" name="birth-year" placeholder="YYYY" required="Tug'ilgan yilingizni kiriting !" id="year">
+              </div>
+            </div>
+            <div class="form__button-wrapper">
+              <div class="line"></div>
+              <button class="form__button button js-button" type="submit">
+                <span class="button__inner">
+                  <img class="button__img" src="img/icon.svg" aria-hidden="true" width="44" height="44" alt="">
+                </span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="main__inner">
+          <div class="main__value"><b class="main__result js-year-result">--</b> yil</div>
+          <div class="main__value"><b class="main__result js-month-result">--</b> oy</div>
+          <div class="main__value"><b class="main__result js-date-result">--</b> kun</div>
+        </div>
+      </div>
+    </div>
+  </section>
   <script src="js/main.js"></script>
 </body>
 </html>

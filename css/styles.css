@@ -208,11 +208,16 @@ input[type=number] {
   line-height: 1.5;
   font-weight: 700;
   border-radius: 8px;
+  outline: none;
 }
 
 .input::placeholder {
   color: #151515;
   opacity: 0.5;
+}
+
+.input:focus {
+  border-color: #854dff;
 }
 
 .form__button-wrapper {
@@ -240,6 +245,15 @@ input[type=number] {
   cursor: pointer;
   margin-left: auto;
   z-index: 10;
+  transition: background-color 0.2s ease;
+}
+
+.form__button:hover {
+  background-color: #151515;
+}
+
+.form__button:active {
+  opacity: 0.8;
 }
 
 .button__inner {
